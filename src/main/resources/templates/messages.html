@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <meta charset="UTF-8">
+    <title>Message List</title>
+</head>
+<body>
+<!-- Include the menu bar fragment -->
+<div th:replace="~{fragments/menu :: menu-bar}"></div>
+
+<table th:each="m : ${messages}">
+    <tr>
+        <td>ID:</td>
+        <td th:text="${m.messageID}"></td>
+    </tr>
+    <tr>
+        <td>Sender:</td>
+        <td th:text="${m.sender}"></td>
+    </tr>
+    <tr>
+        <td>Subject:</td>
+        <td th:text="${m.subject}"></td>
+    </tr>
+    <tr>
+        <td>Timestamp:</td>
+        <td th:text="${m.timestamp}"></td>
+    </tr>
+
+</table>
+</body>
+</html>
