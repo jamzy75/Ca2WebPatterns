@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Register...</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <script>
+            function toggleForm() {
+                const registerForm = document.getElementById("registerForm");
+                const loginForm = document.getElementById("loginForm");
+                const button = document.getElementById("toggleButton");
+
+                const loginVisible = loginForm.style.display === "block";
+
+                registerForm.style.display = loginVisible ? "block" : "none";
+                loginForm.style.display = loginVisible ? "none" : "block";
+                button.value = loginVisible ? "Show Login Form" : "Show Registration Form";
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Include the menu bar fragment -->
+
+
+        <input type="button" id="toggleButton" value="Show Registration Form" onclick="toggleForm()"/>
+        <div id="registerForm" style="display: none;">
+            <form method="post" action="/registerUser">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <label for="first">First name:</label><br>
+                <input type="text" id="first" name="first"><br>
+                <label for="last">Last name:</label><br>
+                <input type="text" id="last" name="last"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="loginForm" style="display: block;">
+            <form method="post" action="/login">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
