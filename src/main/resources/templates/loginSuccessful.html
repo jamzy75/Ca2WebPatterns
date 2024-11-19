@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Success!</title>
+</head>
+<body>
+    <div th:replace="~{fragments/menu :: menu-bar}"></div>
+    <div th:if="${#ctx.session.loggedInUser != null}">
+        <p th:text="|Welcome ${#ctx.session.loggedInUser.getFirstName()}|">
+        </p>
+    </div>
+
+</body>
+</html>
