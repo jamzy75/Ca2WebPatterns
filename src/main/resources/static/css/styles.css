@@ -1,0 +1,37 @@
+/* src/main/resources/static/css/styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.menu-bar {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.menu-bar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
