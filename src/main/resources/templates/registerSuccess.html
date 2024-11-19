@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Registered!</title>
+</head>
+<body>
+<!-- Include the menu bar fragment -->
+<div th:replace="~{fragments/menu :: menu-bar}"></div>
+
+    <div th:if="${registeredUser != null}">
+        User registered successfully!
+    </div>
+</body>
+</html>
